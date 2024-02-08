@@ -1,4 +1,4 @@
-package ru.gb.task1;
+package ru.gb.task1.domen;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -7,9 +7,15 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 
 public class Person {
-    private String firstName;
-    private String lastName;
-    private int age;
+    String firstName;
+    String lastName;
+    int age;
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -38,5 +44,17 @@ public class Person {
                 .append("lastName", lastName)
                 .append("age", age)
                 .toString();
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
